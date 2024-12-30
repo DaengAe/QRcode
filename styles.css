@@ -244,7 +244,7 @@ hr {
 /* 복사 아이콘 스타일 */
 .copy-icon {
   position: absolute;  /* 부모 요소를 기준으로 절대 위치 설정 */
-  right: 35px;  /* 아이콘을 바우처 번호의 오른쪽으로 배치 */
+  right: 30px;  /* 아이콘을 바우처 번호의 오른쪽으로 배치 */
   top: 72%;  /* 수직 중앙에 위치 */
   transform: translateY(-50%);  /* 정확한 수직 중앙 정렬 */
   width: 30px;  /* 아이콘 크기 */
