@@ -1,0 +1,262 @@
+/* 전체 스타일 */
+body {
+  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eeeeee;
+  color: #333; /* 기본 텍스트 색상 */
+  font-size: 14px; /* 기본 텍스트 크기 */
+}
+
+/* 헤더 */
+header {
+  background-color: #ff5a01;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex; /* 플렉스 컨테이너 */
+  align-items: center; /* 세로 정렬을 중앙으로 */
+  justify-content: space-between; /* 왼쪽과 오른쪽 공간 분리 */
+  padding: 10px 10px; /* 좌우 여백 설정 */
+  letter-spacing: 0.5px;
+  margin: 0; /* 여백 제거 */
+  border-top-left-radius: 7px; /* 컨테이너와 둥근 모서리 일치 */
+  border-top-right-radius: 7px; /* 컨테이너와 둥근 모서리 일치 */
+}
+
+/* 왼쪽 로고와 텍스트 컨테이너 */
+.header-left {
+  display: flex; /* 로고와 텍스트를 가로로 정렬 */
+  align-items: center; /* 로고와 텍스트의 세로 중앙 정렬 */
+}
+
+/* 텍스트 스타일 */
+.header-text {
+  margin-left: 8px; /* 로고와 텍스트 간 간격 */
+}
+
+/* 오른쪽 이미지 */
+.header-right {
+  margin: 0; /* 여백 제거 */
+}
+/* 컨테이너 */
+.container {
+  max-width: 600px;
+  margin: 20px 20px; /* 화면 중앙 정렬 */
+  padding: 0px; /* 내부 여백 */
+  background-color: white; /* 흰색 배경 */
+  border-radius: 7px; /* 둥근 모서리 */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.0); /* 그림자 */
+  overflow: hidden;
+  padding-top: 0; /* 헤더가 이미 패딩을 포함하므로 위쪽 패딩 제거 */
+}
+/* 섹션 스타일 */
+.section {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.section-title {
+  font-size: 13px;
+  color: #a0a0a0;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+  margin-bottom: -10px;
+}
+
+.text {
+  font-size: 15px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 5px;
+  letter-spacing: 0.3px;
+}
+
+
+/* 구분선 스타일 */
+hr {
+  width: 91%;
+  border: none;
+  border-top: 1.5px solid #ddd;
+  margin: 0 auto; /* 가로로 중앙 정렬 */
+}
+
+/* 부모 div 스타일 */
+.hr-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  position: relative; /* 부모 div에 상대 위치를 설정 */
+}
+
+/* hr 스타일 */
+.hr-line {
+  border: none;
+  height: 1px;
+  border-top: 2px dotted #eeeeee; /* 점선 스타일 */
+  flex-grow: 1;
+  margin: 0 0px; /* 원과 선 사이의 간격 */
+}
+
+/* 원 스타일 */
+.circle {
+  position: absolute; /* 원을 절대 위치로 설정 */
+  width: 16px; /* 원 크기 */
+  height: 16px; /* 원 크기 */
+  background-color: #eeeeee;
+  border-radius: 50%; /* 원 모양 */
+  top: -8px; /* 원이 수평선 위로 나가도록 설정 */
+}
+
+.circle.left {
+  left: -8px; /* 왼쪽 원이 컨테이너 밖으로 나가게 설정 */
+}
+
+.circle.right {
+  right: -8px; /* 오른쪽 원이 컨테이너 밖으로 나가게 설정 */
+}
+
+
+/* QR 코드 스타일 */
+.qr-code {
+  display: none; /* 처음에 숨김 */
+  text-align: center;
+  border: 1.5px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  padding-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  opacity: 0; /* 초기 투명도 0으로 설정 */
+  max-height: 0; /* 초기 max-height는 0으로 설정 */
+  overflow: hidden; /* 내용이 max-height를 넘어가면 숨깁니다 */
+  transition: opacity 0.3s ease, max-height 0.5s ease; /* 부드러운 애니메이션 효과 */
+}
+
+.qr-code p {
+  font-size: 12px;
+  color: #666;
+  letter-spacing: 0.1px;
+}
+
+.qr-code img {
+  margin: 0px 0;
+  border-radius: 5px;
+}
+
+/* 바우처 번호 */
+.qr-code strong {
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* 토글 버튼 스타일 */
+.toggle-btn {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  display: block;
+  position: relative;
+}
+
+/* 화살표 추가 */
+.toggle-btn::after {
+  content: ">";
+  position: absolute;
+  right: 10px;
+  font-size: 14px;
+  color: #b9b9b9;
+  font-weight:lighter;
+  margin-right: 10px;
+  transform: rotate(90deg) scaleY(2.0) translateX(3px);
+}
+
+/* 화살표 추가 */
+#info::after {
+  content: ">";
+  position: absolute;
+  right: 30px;
+  font-size: 16px;
+  color: #b9b9b9;
+  font-weight:lighter;
+  margin-right: 10px;
+  transform: rotate(90deg) scaleY(2.0) translateX(10px);
+}
+
+.toggle-btn:hover {
+  background-color: #f5f5f5;
+}
+
+/* 버튼 스타일 */
+.button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #eee;
+}
+
+.icon-button {
+  font-size: 16px;
+  color: #999;
+}
+
+.icon-button:hover {
+  color: #666;
+}
+
+
+
+
+
+
+/* 바우처 코드와 아이콘을 포함하는 p 태그 스타일 */
+.voucher-code-container {
+  position: relative;  /* 아이콘 위치를 부모 기준으로 설정 */
+  text-align: center;  /* 바우처 번호를 가운데 정렬 */
+  display: inline-block;  /* 아이콘이 텍스트 옆에 오도록 inline-block 설정 */
+}
+
+/* 복사 아이콘 스타일 */
+.copy-icon {
+  position: absolute;  /* 부모 요소를 기준으로 절대 위치 설정 */
+  right: 50px;  /* 아이콘을 바우처 번호의 오른쪽으로 배치 */
+  top: 72%;  /* 수직 중앙에 위치 */
+  transform: translateY(-50%);  /* 정확한 수직 중앙 정렬 */
+  width: 30px;  /* 아이콘 크기 */
+  height: 30px;
+  cursor: pointer;
+}
+
+.copy-icon:hover {
+  opacity: 0.7;  /* 호버 시 투명도 변경 */
+}
+
+.voucher-code-container {
+  display: block;  /* 기존의 flex를 block으로 변경 */
+  margin: 0; /* 여백 제거 */
+}
