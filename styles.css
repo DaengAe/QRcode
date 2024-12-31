@@ -27,7 +27,7 @@ header {
 /* 왼쪽 로고와 텍스트 컨테이너 */
 .header-left {
   display: flex; /* 로고와 텍스트를 가로로 정렬 */
-  align-items: flex-end; /* 텍스트를 로고의 아래쪽으로 정렬 */
+  align-items: center; /* 텍스트를 로고의 세로 중앙정렬 */
 }
 
 
