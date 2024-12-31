@@ -260,3 +260,18 @@ hr {
   display: block;  /* 기존의 flex를 block으로 변경 */
   margin: 0; /* 여백 제거 */
 }
+
+
+
+.no-link-style {
+        text-decoration: none;  /* 링크 밑줄 없애기 */
+        color: inherit;         /* 텍스트 색상 기본값으로 유지 */
+}
+
+.no-link-style:hover {
+        text-decoration: none;  /* 마우스 오버 시에도 밑줄 없애기 */
+}
+
+.no-link-style img {
+        vertical-align: middle; /* 이미지와 텍스트 정렬 맞추기 */
+}
