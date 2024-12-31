@@ -35,7 +35,6 @@ header {
 .header-text {
   margin-left: 4px; /* 로고와 텍스트 간 간격 */
   font-size: 20px;
-  padding-top: 20px;
 }
 
 /* 오른쪽 이미지 */
