@@ -37,7 +37,6 @@ header {
   margin-left: 0px; /* 로고와 텍스트 간 간격 */
   font-size: 22px;
   margin-top: 5px; /* 텍스트를 아래로 내림 */
-  position: relative; /* 필요한 경우 위치 조정을 위해 추가 */
 }
 
 /* 오른쪽 이미지 */
